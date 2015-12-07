@@ -1,4 +1,4 @@
-var app = angular.module('pinterestApp', ['ngRoute']);
+var app = angular.module('pinterestApp', ['ngRoute', 'firebase']);
   app.config(function ($routeProvider) {
     $routeProvider
       .when('/', {

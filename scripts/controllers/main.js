@@ -1,17 +1,22 @@
-'use strict';
 
-/**
- * @ngdoc function
- * @name pinterestApp.controller:MainCtrl
- * @description
- * # MainCtrl
- * Controller of the pinterestApp
- */
 angular.module('pinterestApp')
-  .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+  .controller('MainCtrl', ["$scope", "Auth",
+  function($scope, Auth) {
+    $scope.createUser = function() {
+      $scope.message = null;
+      $scope.error = null;
+      console.log('running')
+
+      Auth.$createUser({
+        email: $scope.email,
+        password: $scope.password
+      }).then(function(userData) {
+        $scope.message = "User created with uid: " + userData.uid;
+      }).catch(function(error) {
+        $scope.error = error;
+      });
+    };
+
+  }]);
+
+
