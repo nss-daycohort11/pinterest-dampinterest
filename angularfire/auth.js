@@ -6,7 +6,6 @@ app.factory("Auth", ["$firebaseAuth",
   }
 ]);
 
-// and use it in our controller
 app.controller("LoginCtrl", ["$scope", "Auth",
   function($scope, Auth) {
 
