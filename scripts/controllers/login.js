@@ -1,11 +1,3 @@
-'use strict';
-/**
- * @ngdoc function
- * @name pinterestApp.controller:LoginCtrl
- * @description
- * # LoginCtrl
- * Manages authentication to any active providers.
- */
 angular.module('pinterestApp')
   .controller('LoginCtrl', function ($scope, Auth, $location, $q, Ref, $timeout) {
     $scope.oauthLogin = function(provider) {
