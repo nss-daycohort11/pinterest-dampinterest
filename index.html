@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang ="en">
+	<head>
+	  <meta charset="utf-8">
+	  <title>Pinterest</title>
+	  <link rel="stylesheet" type="text/css" href="lib/bower_components/bootstrap/dist/css/bootstrap.min.css">
+	  <!-- <link rel="stylesheet" type="text/css" href="styles/main.css"> -->
+	</head>
+	<body ng-app="Pinterest">
+<!-- 			<nav id="navigation" class="bordered">
+				<ul>
+					<li><a href="#/songs/list" id="view-music-link">View Music</a></li>
+					<li>|</li>
+					<li><a href="#/songs/add" id="add-music-link">Add Music</a></li>
+					<li>|</li>
+					<li><a href="#" id="profile-link">Profile</a></li>
+				</ul>
+			</nav>
+			<nav class="hidden bordered">
+				<ul>
+					<li><a href="#">View Music</a></li>
+					<li>|</li>
+					<li><a href="#">Add Music</a></li>
+					<li>|</li>
+					<li><a href="#">Profile</a></li>
+				</ul>
+			</nav> -->
+
+				
+			<section>
+				<div ng-view>
+					
+				</div>
+			</section>
+
+		<script src="lib/bower_components/angular/angular.min.js"></script>
+		<script src="lib/bower_components/angular-filter/dist/angular-filter.min.js"></script>
+		<script src="lib/bower_components/angular-route/angular-route.js"></script>
+		<script src="lib/bower_components/firebase/firebase.js"></script>
+		<script src="lib/bower_components/angularfire/dist/angularfire.min.js"></script>
+		<script src="app/app.js"></script>
+<!-- 		// <script src="app/factories/SongStorage.js"></script>
+		// <script src="app/controllers/SongCtrl.js"></script>
+		// <script src="app/controllers/SongFormCtrl.js"></script>
+		// <script src="app/controllers/SongDetailCtrl.js"></script> -->
+	</body>
+</html>
