@@ -11,6 +11,11 @@ var app = angular.module('pinterestApp', ['ngRoute', 'firebase']);
         controller: 'UserHomeCtrl',
         controllerAs: 'userHome'
       })
+      .when('/profile', {
+        templateUrl: 'partials/profile.html',
+        controller: 'ProfileCtrl',
+        controllerAs: 'profile'
+      })
       .otherwise({
         redirectTo: '/'
       });

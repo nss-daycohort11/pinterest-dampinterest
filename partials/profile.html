@@ -1,6 +1,5 @@
-<div id = "img"> image key goes here </div>
-<h1 id = "name"> name key here </h1>
-<p id = "location"> location key goes here (if we use it) </p>
-<h4 id = "bio"> bio key goes here </h4>
- 
-
+<div id="createPin">
+  <input ng-model="createdPin.picURL" type="text" placeholder="Image URL Here">
+  <input ng-model="createdPin.picInfo" type="textarea" placeholder="About this Pin">
+  <button ng-click="newPin()"class="newPin">New Pin</button>
+</div>
