@@ -8,7 +8,12 @@ angular
   		$scope.pins = $firebaseArray(ref);
   		$scope.createdPin = {};
 
+      $scope.$watch(function() {
+
+      })
+
   		$scope.newPin = function() {
+
   			$scope.pins.$add({
   				picURL: $scope.createdPin.picURL,
   				picInfo: $scope.createdPin.picInfo,
