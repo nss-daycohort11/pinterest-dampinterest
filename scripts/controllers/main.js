@@ -1,5 +1,5 @@
 angular.module('pinterestApp')
-  .controller('MainCtrl', ["$scope", "Auth", "$location",
+  .controller('MainCtrl', ["$scope", "Auth", "$location", 
   
   function($scope, Auth, $location) {
     $scope.createUser = function() {
@@ -13,7 +13,7 @@ angular.module('pinterestApp')
       }).then(function(userData) {
         console.log("things", userData)
         $scope.message = "User created with uid: " + userData.uid;
-        $location.path("/profile");
+        $location.path("/userHome");
       }).catch(function(error) {
         $scope.error = error;
       });
@@ -24,6 +24,7 @@ angular.module('pinterestApp')
        
         Auth.$authWithOAuthPopup("facebook").then(function(authData) {
           console.log("Logged in as:", authData.uid);
+          $location.path("/userHome");
         }).catch(function(error) {
           console.log("Authentication failed:", error);
         });

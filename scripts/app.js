@@ -6,10 +6,10 @@ var app = angular.module('pinterestApp', ['ngRoute', 'firebase']);
         controller: 'MainCtrl',
         controllerAs: 'main'
       })
-      .when('/about', {
-        templateUrl: 'partials/about.html',
-        controller: 'AboutCtrl',
-        controllerAs: 'about'
+      .when('/userHome', {
+        templateUrl: 'partials/userHome.html',
+        controller: 'UserHomeCtrl',
+        controllerAs: 'userHome'
       })
       .otherwise({
         redirectTo: '/'
