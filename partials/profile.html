@@ -1,19 +1,28 @@
+<!-- <<<<<<< HEAD
 <div id="createPin">
   <input ng-model="createdPin.picURL" type="text" placeholder="Image URL Here">
   <input ng-model="createdPin.picInfo" type="textarea" placeholder="About this Pin">
   <select ng-options="board.name for board in boards" ng-model="selectedBoard"></select>
   <button ng-click="newPin()"class="newPin">New Pin</button>
-</div>
+</div> -->
 
+<!-- ======= -->
+<div class="jumbotron">
+  <h1>Dam Pinterest</h1>
+</div>
 <div id="createBoard">
-	<input ng-model="createdBoard" type="text" placehold="New Board Name"></input>
+	<input ng-model="createdBoard.name" type="text" placehold="New Board Name"></input>
 	<button ng-click="newBoard()">New Board</button>
 </div>
+
+<!-- >>>>>>> bbf1ab68121d4e82b60e1f78a9b3612808dc60c3 -->
 
 <div id="wrapper">
 	<div id="columns">
 		<div class="pin">
-				<img src="https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.snap-undp.org%2FWeeklyHighlights%2FLists%2FPhotos%2Fplaceholder.png&f=1">
+				<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+					<img src="https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.snap-undp.org%2FWeeklyHighlights%2FLists%2FPhotos%2Fplaceholder.png&f=1">
+				</button>
 				<p>New Pin</p>
 		</div>
 		<div ng-repeat="pin in pins" class="pin">
@@ -21,4 +30,25 @@
 			<p>{{pin.picInfo}}</p>
 		</div>
 	</div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">New Pin</h4>
+      </div>
+      <div class="modal-body">
+        <div id="createPin">
+				  <input ng-model="createdPin.picURL" type="text" placeholder="Image URL Here">
+				  <input ng-model="createdPin.picInfo" type="textarea" placeholder="About this Pin">
+				  <select ng-options="board.name for board in boards" ng-model="selectedBoard"></select>
+				  <button type="button" ng-click="newPin()"class="newPin btn btn-default" data-dismiss="modal">New Pin</button>
+				</div>
+      </div>
+    </div>
+  </div>
 </div>
