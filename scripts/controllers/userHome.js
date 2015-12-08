@@ -1,4 +1,7 @@
-angular.module('pinterestApp')
+angular
+	.module('pinterestApp')
   .controller('UserHomeCtrl', ["$scope", "Auth",
-  	console.log("what's the buzz")
-  	]);
+  	function($scope, Auth) {
+  		console.log("what's the buzz")
+  	}
+  ]);
