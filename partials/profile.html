@@ -1,7 +1,13 @@
 <div id="createPin">
   <input ng-model="createdPin.picURL" type="text" placeholder="Image URL Here">
   <input ng-model="createdPin.picInfo" type="textarea" placeholder="About this Pin">
+  <select ng-options="board.name for board in boards" ng-model="selectedBoard"></select>
   <button ng-click="newPin()"class="newPin">New Pin</button>
+</div>
+
+<div id="createBoard">
+	<input ng-model="createdBoard" type="text" placehold="New Board Name"></input>
+	<button ng-click="newBoard()">New Board</button>
 </div>
 
 <div id="wrapper">
