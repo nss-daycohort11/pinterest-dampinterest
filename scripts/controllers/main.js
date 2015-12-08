@@ -13,6 +13,7 @@ angular.module('pinterestApp')
         console.log("things", userData)
         $scope.message = "User created with uid: " + userData.uid;
         $location.path("/userHome");
+        $scope.logInNav = true;
       }).catch(function(error) {
         $scope.error = error;
       });
