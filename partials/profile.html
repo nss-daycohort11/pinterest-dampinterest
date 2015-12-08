@@ -13,6 +13,9 @@
 <div id="createBoard">
 	<input ng-model="createdBoard.name" type="text" placehold="New Board Name"></input>
 	<button ng-click="newBoard()">New Board</button>
+	<span>Select a board:</span><select ng-options="board.name for board in boards" ng-model="boards"></select>
+</div>
+<div id="selectBoard">
 </div>
 
 <!-- >>>>>>> bbf1ab68121d4e82b60e1f78a9b3612808dc60c3 -->

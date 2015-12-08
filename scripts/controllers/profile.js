@@ -18,12 +18,15 @@ angular
           board: $scope.selectedBoard.name
   			})
   				console.log("uid", uid);
+          $scope.createdPin.picURL = null;
+          $scope.createdPin.picInfo = null;
   		}
 
       $scope.newBoard = function() {
         $scope.boards.$add({
           name: $scope.createdBoard.name
         })
+        $scope.createdBoard.name = null;
       }
     }
 
