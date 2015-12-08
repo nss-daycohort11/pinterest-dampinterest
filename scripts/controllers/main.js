@@ -28,7 +28,7 @@ angular.module('pinterestApp')
     $scope.loginUser = function() {
       $scope.message = null;
       $scope.error = null;
-      console.log('running');
+      console.log('running login');
       var ref = new Firebase("https://dampinterest.firebaseio.com");
           ref.authWithPassword({
             email    : $scope.email,
@@ -40,6 +40,9 @@ angular.module('pinterestApp')
             } else {
               console.log("Authenticated successfully with payload:", authData);
               $scope.message = "Authenticated successfully: " + authData + ".";
+              $location.path("/userHome");
+              $scope.logInNav = true;
+              $scope.$apply();
             }
           });    
     };
