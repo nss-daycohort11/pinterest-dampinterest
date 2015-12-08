@@ -1,7 +1,7 @@
 var app = angular.module('pinterestApp', ['ngRoute', 'firebase']);
   app.config(function ($routeProvider) {
     $routeProvider
-      .when('/main', {
+      .when('/', {
         templateUrl: 'partials/main.html',
         controller: 'MainCtrl',
         controllerAs: 'main'
