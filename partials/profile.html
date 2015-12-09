@@ -13,7 +13,7 @@
 <div id="createBoard">
 	<input ng-model="createdBoard.name" type="text" placehold="New Board Name"></input>
 	<button ng-click="newBoard()">New Board</button>
-	<span>Select a board:</span><select ng-options="board.name for board in boards" ng-model="boards"></select>
+	<span>Select a board:</span><select ng-options="board.name for board in boards" ng-model="boardSelect"></select><button ng-click="boardSelect = null">View all</button>
 </div>
 <div id="selectBoard">
 </div>
@@ -28,7 +28,7 @@
 				</button>
 				<p>New Pin</p>
 		</div>
-		<div ng-repeat="pin in pins" class="pin">
+		<div ng-repeat="pin in pins | filter:boardSelect.name" class="pin">
 			<img src="{{pin.picURL}}">
 			<p>{{pin.picInfo}}</p>
 		</div>
