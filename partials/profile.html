@@ -28,7 +28,7 @@
 				</button>
 				<p>New Pin</p>
 		</div>
-		<div ng-repeat="pin in pins | filter:boardSelect.name" class="pin">
+		<div ng-repeat="pin in pins | filter:boardSelect.name | filter:searchText" class="pin">
 			<img src="{{pin.picURL}}">
 			<p>{{pin.picInfo}}</p>
 		</div>
