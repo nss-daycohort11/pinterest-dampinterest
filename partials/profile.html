@@ -2,13 +2,11 @@
   <h1>Dam Pinterest</h1>
 </div>
 <div id="createBoard">
-	<input ng-model="createdBoard.name" type="text" placehold="New Board Name"></input>
+	<input ng-model="createdBoard.name" type="text" placeholder="New Board Name">
 	<button ng-click="newBoard()">New Board</button>
 	<span>Select a board:</span><select ng-options="board.name for board in boards" ng-model="boardSelect"></select><button ng-click="boardSelect = null">View all</button>
+	<input ng-model="searchText" type="text" placeholder="Search Pins">
 </div>
-<div id="selectBoard">
-</div>
-
 
 <div id="wrapper">
 	<div id="columns">
