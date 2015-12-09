@@ -1,24 +1,12 @@
-<!-- <<<<<<< HEAD
-<div id="createPin">
-  <input ng-model="createdPin.picURL" type="text" placeholder="Image URL Here">
-  <input ng-model="createdPin.picInfo" type="textarea" placeholder="About this Pin">
-  <select ng-options="board.name for board in boards" ng-model="selectedBoard"></select>
-  <button ng-click="newPin()"class="newPin">New Pin</button>
-</div> -->
-
-<!-- ======= -->
 <div class="jumbotron">
   <h1>Dam Pinterest</h1>
 </div>
 <div id="createBoard">
-	<input ng-model="createdBoard.name" type="text" placehold="New Board Name"></input>
+	<input ng-model="createdBoard.name" type="text" placeholder="New Board Name">
 	<button ng-click="newBoard()">New Board</button>
-	<span>Select a board:</span><select ng-options="board.name for board in boards" ng-model="boards"></select>
+	<span>Select a board:</span><select ng-options="board.name for board in boards" ng-model="boardSelect"></select><button ng-click="boardSelect = null">View all</button>
+	<input ng-model="searchText" type="text" placeholder="Search Pins">
 </div>
-<div id="selectBoard">
-</div>
-
-<!-- >>>>>>> bbf1ab68121d4e82b60e1f78a9b3612808dc60c3 -->
 
 <div id="wrapper">
 	<div id="columns">
@@ -28,7 +16,7 @@
 				</button>
 				<p>New Pin</p>
 		</div>
-		<div ng-repeat="pin in pins" class="pin">
+		<div ng-repeat="pin in pins | filter:boardSelect.name | filter:searchText" class="pin">
 			<img src="{{pin.picURL}}">
 			<p>{{pin.picInfo}}</p>
 		</div>
