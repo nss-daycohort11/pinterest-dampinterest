@@ -5,8 +5,32 @@
 <div id="wrapper">
 	<div id="columns">
 		<div ng-repeat="pin in pins" class="pin">
-			<img src="{{pin.picURL}}">
-			<p>{{pin.picInfo}}</p>
+				<button type="button" class="blur pic" data-toggle="modal" data-target="#yourModal">
+					<img src="{{pin.picURL}}">
+				</button>
+					<p>{{pin.picInfo}}</p>
 		</div>
 	</div>
 </div>
+
+<!-- Modal -->
+<div class="modal fade" id="yourModal" tabindex="-1" role="dialog" aria-labelledby="yourModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="yourModalLabel">New Pin</h4>
+      </div>
+      <div class="modal-body">
+        <div id="createPin">
+				  <input ng-model="createdPin.picURL" type="text" placeholder="Image URL Here">
+				  <input ng-model="createdPin.picInfo" type="textarea" placeholder="About this Pin">
+				  <select ng-options="board.name for board in boards" ng-model="selectedBoard"></select>
+				  <button type="button" ng-click="newPin()"class="newPin btn btn-default" data-dismiss="modal">New Pin</button>
+				</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+				

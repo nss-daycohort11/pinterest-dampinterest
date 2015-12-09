@@ -71,7 +71,7 @@ body {
   .jumbotron {
     border-bottom: 0; } }
 #wrapper {
-  width: 90%;
+  width: 100%;
   max-width: 1100px;
   min-width: 800px;
   margin: 50px auto; }
@@ -124,5 +124,15 @@ body {
     -webkit-column-count: 5;
     -moz-column-count: 5;
     column-count: 5; } }
+
+    input, button, submit { 
+      border: none;
+      background: none; }
+
+ 
+.blur img:hover {
+  opacity: 0.3;
+  filter: alpha(opacity=30);
+}
 
 /*# sourceMappingURL=main.css.map */
