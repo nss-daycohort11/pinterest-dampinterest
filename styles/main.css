@@ -135,4 +135,13 @@ button.blur {
   filter: alpha(opacity=30);
 }
 
+button, input {
+  margin-left: 5px;
+}
+
+#createBoard {
+  margin: 0 auto 0 auto;
+  width: 100%;
+}
+
 /*# sourceMappingURL=main.css.map */
